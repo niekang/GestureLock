@@ -15,6 +15,7 @@
 		829808C81F170A33004D744C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829808C61F170A33004D744C /* LaunchScreen.storyboard */; };
 		829808D31F170A33004D744C /* GestureLockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 829808D21F170A33004D744C /* GestureLockTests.m */; };
 		829808DE1F170A33004D744C /* GestureLockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 829808DD1F170A33004D744C /* GestureLockUITests.m */; };
+		829808ED1F170BFB004D744C /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829808EC1F170BFB004D744C /* LockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		829808D91F170A33004D744C /* GestureLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829808DD1F170A33004D744C /* GestureLockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureLockUITests.m; sourceTree = "<group>"; };
 		829808DF1F170A33004D744C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		829808EB1F170BFB004D744C /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
+		829808EC1F170BFB004D744C /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				829808BC1F170A33004D744C /* AppDelegate.m */,
 				829808BE1F170A33004D744C /* ViewController.h */,
 				829808BF1F170A33004D744C /* ViewController.m */,
+				829808EB1F170BFB004D744C /* LockView.h */,
+				829808EC1F170BFB004D744C /* LockView.m */,
 				829808C11F170A33004D744C /* Main.storyboard */,
 				829808C41F170A33004D744C /* Assets.xcassets */,
 				829808C61F170A33004D744C /* LaunchScreen.storyboard */,
@@ -207,7 +212,7 @@
 				TargetAttributes = {
 					829808B41F170A33004D744C = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					829808CD1F170A33004D744C = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				829808C01F170A33004D744C /* ViewController.m in Sources */,
+				829808ED1F170BFB004D744C /* LockView.m in Sources */,
 				829808BD1F170A33004D744C /* AppDelegate.m in Sources */,
 				829808BA1F170A33004D744C /* main.m in Sources */,
 			);
@@ -426,10 +432,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GestureLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nk.GestureLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -437,10 +445,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GestureLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nk.GestureLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -509,6 +519,7 @@
 				829808E41F170A33004D744C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		829808E51F170A33004D744C /* Build configuration list for PBXNativeTarget "GestureLockTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +528,7 @@
 				829808E71F170A33004D744C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		829808E81F170A33004D744C /* Build configuration list for PBXNativeTarget "GestureLockUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +537,7 @@
 				829808EA1F170A33004D744C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
