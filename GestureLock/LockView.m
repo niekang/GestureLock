@@ -14,7 +14,7 @@
 
 //选中按钮数组
 @property (nonatomic, strong)NSMutableArray *selectBtnArray;
-
+//当前触摸点
 @property (nonatomic, assign)CGPoint  currentPoint ;
 
 
@@ -41,7 +41,7 @@
     
     UIImage *normalImage = [self imageWithColor:[UIColor grayColor] selected:NO];
     UIImage *selectImage = [self imageWithColor:[UIColor blueColor] selected:YES];
-    
+    //循环设置9个按钮圈圈
     for (int i=0; i<9; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:normalImage forState:UIControlStateNormal];
@@ -111,7 +111,7 @@
     
     UIImage *image = nil;
     
-    CGRect rect = CGRectMake(0, 0, 70, 70);
+    CGRect rect = CGRectMake(0, 0, btnWidth, btnWidth);
     
     CGFloat lineW = 2;
     
@@ -128,6 +128,7 @@
     
     CGContextStrokePath(ctx);
     
+    //若是选中图片 画出内环
     if (selected) {
         
         CGFloat innerW = 20;
